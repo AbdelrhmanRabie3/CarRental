@@ -40,7 +40,7 @@ const getCarModelById = (carId) => {
   return car ? car.model : "Unknown";
 };
 
-const userBookings = bookings.filter(b => Number(b.userId) === Number(currentUser.id));
+const userBookings = bookings.filter(b =>b.userId === currentUser.id);
 
 if (userBookings.length === 0) {
   console.warn("No bookings found for the current user. User ID:", currentUser.id);
